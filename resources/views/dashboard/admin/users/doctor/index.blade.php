@@ -181,6 +181,10 @@
                                                                 Jam Selesai :
                                                                 {{ $service->end_time }}
                                                                 <br>
+                                                                Status Jadwal :
+                                                                {{ $service->is_active == 1 ? 'Aktif' : 'Tidak Aktif'}}
+                                                                <br>
+                                                                <br>
                                                             @else
                                                                 Dokter belum mengatur jadwal
                                                             @endif
@@ -255,7 +259,7 @@
                                                                                     value="{{ $item->address }}"
                                                                                     placeholder="">
                                                                             </div>
-                                                                            <div class="form-group">
+                                                                            {{-- <div class="form-group">
                                                                                 <label for="nama">Hari</label>
                                                                                 <select name="hari" id="hari"
                                                                                     class="form-control">
@@ -281,7 +285,7 @@
                                                                                         {{ $item->day == 7 ? 'selected' : '' }}>
                                                                                         Minggu</option>
                                                                                 </select>
-                                                                            </div>
+                                                                            </div> --}}
 
                                                                             {{-- <div class="form-group">
                                                                                 <label for="nama">Jam Mulai</label>

@@ -36,6 +36,6 @@ class Doctor extends Model
 
     public function serviceSchedule()
     {
-        return $this->hasOne(ServiceSchedule::class);
+        return $this->hasMany(ServiceSchedule::class);
     }
 }

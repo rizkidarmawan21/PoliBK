@@ -19,13 +19,13 @@
 
 <body>
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg mb-5">
-        <a class="navbar-brand" href="/">Home</a>
+        <a class="navbar-brand" href="/">Informasi Jadwal</a>
     </nav>
 
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Data Dokter</h1>
+                <h1>Jadwal Dokter</h1>
                 <div class="card">
 
                     <div class="card-body">
@@ -37,7 +37,7 @@
                                     <th>Poli</th>
                                     <th>No Telepon</th>
                                     <th>Jadwal</th>
-                                    <th>Jam</th>
+                                    <th>Jam Praktek</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -48,24 +48,23 @@
                                         <td>{{ $item->poli->name }}</td>
                                         <td>{{ $item->phone_number }}</td>
                                         <td>
-                                            @foreach ($service as $item2)
-                                                @if ($item2->doctor_id == $item->id)
-                                                    {{ $item2->day == 1 ? 'Senin' : '' }}
-                                                    {{ $item2->day == 2 ? 'Selasa' : '' }}
-                                                    {{ $item2->day == 3 ? 'Rabu' : '' }}
-                                                    {{ $item2->day == 4 ? 'Kamis' : '' }}
-                                                    {{ $item2->day == 5 ? 'Jumat' : '' }}
-                                                    {{ $item2->day == 6 ? 'Sabtu' : '' }}
-                                                    {{ $item2->day == 7 ? 'Minggu' : '' }}
-                                                @endif
+                                            @foreach ($item->serviceSchedule as $item2)
+                                                {{ $item2->day == 1 ? 'Senin' : '' }}
+                                                {{ $item2->day == 2 ? 'Selasa' : '' }}
+                                                {{ $item2->day == 3 ? 'Rabu' : '' }}
+                                                {{ $item2->day == 4 ? 'Kamis' : '' }}
+                                                {{ $item2->day == 5 ? 'Jumat' : '' }}
+                                                {{ $item2->day == 6 ? 'Sabtu' : '' }}
+                                                {{ $item2->day == 7 ? 'Minggu' : '' }}
+                                                <br>
                                             @endforeach
                                         </td>
 
                                         <td>
-                                            @foreach ($service as $item2)
-                                                @if ($item2->doctor_id == $item->id)
-                                                    {{ $item2->start_time }} - {{ $item2->end_time }}
-                                                @endif
+                                            @foreach ($item->serviceSchedule as $item2)
+                                                {{ \Carbon\Carbon::parse($item2->start_time)->format('H.i') }} -
+                                                {{ \Carbon\Carbon::parse($item2->end_time)->format('H.i') }}
+                                                <br>
                                             @endforeach
 
                                         </td>

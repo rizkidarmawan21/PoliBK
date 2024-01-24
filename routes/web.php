@@ -35,7 +35,7 @@ Route::get('/', function () {
 
 Route::get('/register/patient', function () {
     return view('client.register-rm');
-})->name('register.patient.view');
+})->name('register.patient.view')->middleware('guest');
 
 Route::post('/register/patient', [ControllersPatientController::class, 'register'])->name('register.patient');
 Route::post('/register/poli', [ControllersPatientController::class, 'registerPoli'])->name('register.poli');
@@ -58,9 +58,10 @@ Route::get('/patient/poli-register', function () {
 })->name('get.register.poli');
 
 Route::get('/info-doctor', function () {
-    $doctor = Doctor::all();
-    $service = ServiceSchedule::all();
-    return view('dashboard.doctor.list-dokter.index', compact('doctor', 'service'));
+    $doctor = Doctor::with(['serviceSchedule' => function ($query) {
+        $query->where('is_active', 1);
+    }])->get();
+    return view('dashboard.doctor.list-dokter.index', compact('doctor'));
 })->name('info.doctor');
 
 Route::prefix('dashboard')->name('dashboard.')->group(function () {

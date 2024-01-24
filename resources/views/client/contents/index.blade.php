@@ -14,16 +14,18 @@
         <div class="circle x10"></div>
         <div class="container">
             <div class="row full-height align-items-center">
-                <div class="col-md-6 p-100px-t p-50px-b md-p-10px-b">
-                    <h2 class="text-capitalize m-25px-b">Rumah Sakit. <br>Pelayanan Kesehatan Terbaik</h2>
+                <div class="col-md-6 p-100 px-t p-50 px-b md-p-10 px-b">
+                    <h2 class="text-capitalize m-25 px-b">Poliklinik. <br>Pelayanan Kesehatan Terbaik</h2>
                     <p class="m-25px-b">Melayani dengan sepenuh hati, memberikan pelayanan kesehatan terbaik untuk
                         masyarakat</p>
                     <div class="hero-btn-wrapper">
                         <a href="{{ route('get.register.poli') }}" class="btn btn-default animated-btn">Daftar Sekarang</a>
                     </div>
                 </div>
-                <div class="col-md-6 p-100px-t p-50px-b md-p-10px-t">
-                    <img class="hero-mock" src="{{ asset('assets/img/docter.png') }}" alt="">
+                <div class="col-md-6 p-100 px-t p-50 px-b md-p-10 px-t">
+                    <img class="hero-mock" width="150%"
+                        src="https://private-user-images.githubusercontent.com/80609220/299374965-5740a26e-1a89-4d7e-bc36-609b324883b8.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDYxMTIxMTcsIm5iZiI6MTcwNjExMTgxNywicGF0aCI6Ii84MDYwOTIyMC8yOTkzNzQ5NjUtNTc0MGEyNmUtMWE4OS00ZDdlLWJjMzYtNjA5YjMyNDg4M2I4LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAxMjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMTI0VDE1NTY1N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTYwNzVlZDE0YzUxMzhiZDkxZGNlNTNjYjIxMWY0ZDgxNzBhNjAzN2YxM2U0ZTkyNWRjYmU5NjJiMjYxYjA5YTYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.CmmO_OG9do4phQ-oqkMMRvL5jsqdH02kbla8BNCoRJA"
+                        alt="">
                 </div>
             </div>
         </div>

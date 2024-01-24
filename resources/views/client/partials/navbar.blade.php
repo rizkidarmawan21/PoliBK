@@ -9,13 +9,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCodeply">
                 <ul class="nav navbar-nav ml-auto">
-                    <li><a class="nav-link" href="{{ route('get.register.poli') }}">Buat Janji</a></li>
-                    <li><a class="nav-link" href="{{ route('info.doctor') }}">Info Dokter</a></li>
+                    {{-- <li><a class="nav-link" href="{{ route('get.register.poli') }}">Buat Janji</a></li> --}}
+                    <li><a class="nav-link" href="{{ route('info.doctor') }}">Informasi Jadwal</a></li>
                     <li>
                         @if (Auth::check())
-                            <a class="nav-link" href="{{ route('logout') }}">Logout</a>
+                            <a class="nav-link" href="{{ route('logout') }}">Keluar</a>
                         @else
-                            <a class="nav-link" href="{{ route('login') }}">Login</a>
+                            <a class="nav-link" href="{{ route('login') }}">Masuk</a>
                         @endif
                     </li>
                 </ul>
