@@ -23,14 +23,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $password = bcrypt('iniadmin');
-        $password2 = bcrypt('inidokter');
-        $password3 = bcrypt('inipasien');
+        $password = bcrypt('password');
+        $password2 = bcrypt('password');
+        $password3 = bcrypt('password');
 
         // admin default
         User::create([
             'name' => 'Admin',
-            'email' => 'admin@rs.poli.com',
+            'email' => 'admin@gmail.com',
             'email_verified_at' => now(),
             'role' => 'admin',
             'is_active' => 1,
@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder
         // dokter default
         User::create([
             'name' => 'Dokter',
-            'email' => 'fitridoctor@rs.poli.com',
+            'email' => 'doctor@mail.com',
             'email_verified_at' => now(),
             'role' => 'doctor',
             'is_active' => 1,
@@ -52,7 +52,7 @@ class DatabaseSeeder extends Seeder
         // pasien default
         User::create([
             'name' => 'Pasien',
-            'email' => 'fitritest@gmail.com',
+            'email' => 'test@gmail.com',
             'email_verified_at' => now(),
             'role' => 'guest',
             'is_active' => 1,

@@ -4,7 +4,7 @@
             <div class="col-sm-12">
                 <div class="footer-top text-center p-30px-tb">
                     <a class="footer-logo" href="">
-                        RS. BK Udinus
+                        RS. Poliklinik BK Udinus
                     </a>
                     <p>Jl Imam Bonjol No.207, Pendrikan Kidul, Kec. Semarang Tengah, Kota Semarang, Jawa Tengah 50131
                     </p>
@@ -12,8 +12,7 @@
 
                 </div>
                 <div class="footer-copyright p-30px-tb text-center">
-                    <p>Copyright &copy; BK Udinus 2023. All Rights Reserved. Made with Lailatul
-                        Fitriyah</a></p>
+                    <p>Copyright &copy; Poliklinik 2023. All Rights Reserved</a></p>
                 </div>
             </div>
         </div>
